@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className="py-0 padding-bottom: 10px">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="col-span-7 flex flex-col justify-center">
           <h1 className="text-white mb-4 text-3xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
@@ -17,18 +17,18 @@ const HeroSection = () => {
             <br className="lg:hidden" />
             <TypeAnimation
               sequence={[
-                'Hayden',
+                "Hayden",
                 1000,
-                'a Developer',
+                "a Student",
                 1000,
-                'a Designer',
+                "a Developer",
                 1000,
-                'a Student',
-                1000
+                "a Designer",
+                1000,
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: '3xl', display: 'inline-block' }}
+              style={{ fontSize: "3xl", display: "inline-block" }}
               repeat={Infinity}
             />
           </h1>
@@ -36,32 +36,37 @@ const HeroSection = () => {
           <p
             className="text-[#DAE2D6] text-lg lg:text-xl"
             style={{
-              paddingTop: '25px',
-              paddingBottom: '30px',
+              paddingTop: "25px",
+              paddingBottom: "30px",
             }}
           >
-            I am a computer science student at the University of Central Florida and this is my portfolio website!
+            I am a computer science student at the University of Central Florida
+            and this is my portfolio website!
           </p>
 
           <button
-            className='transition-transform transform hover:scale-105 hover:bg-gradient-to-br hover:from-red-600 hover:to-orange-500 focus:outline-none'
+            className="transition-transform transform hover:scale-105 hover:bg-gradient-to-br hover:from-red-600 hover:to-orange-500 focus:outline-none"
             style={{
-              border: 'none',
-              borderRadius: '8px',
-              padding: '10px 20px',
-              color: 'white',
-              fontSize: '16px',
-              cursor: 'pointer',
-              width: '200px',
-              background: 'linear-gradient(to right, red, orange)',
-              boxShadow: 'inset 0 0 0 1px white', // Add a border inside the edge
+              border: "none",
+              borderRadius: "8px",
+              padding: "10px 20px",
+              color: "white",
+              fontSize: "16px",
+              cursor: "pointer",
+              width: "200px",
+              background: "linear-gradient(to right, red, orange)",
+              boxShadow: "inset 0 0 0 1px white", // Add a border inside the edge
             }}
+            onClick={() => window.open("/resume.pdf", "_blank")}
           >
             Resume
           </button>
         </div>
 
-        <div className='col-span-5 flex justify-center' style={{ maxHeight: '500px', overflow: 'hidden' }}>
+        <div
+          className="col-span-5 flex justify-center"
+          style={{ maxHeight: "500px", overflow: "hidden" }}
+        >
           <Image
             src="/images/scubadiver.jpeg"
             alt="profile pic"
@@ -73,6 +78,6 @@ const HeroSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default HeroSection;
