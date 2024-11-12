@@ -5,10 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   return (
-    <section className="py-0 padding-bottom: 10px">
+    <section className="py-0 pb-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="col-span-7 flex flex-col justify-center">
-          <h1 className="text-white mb-4 text-3xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-5xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold">
             <p>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">
                 Hello, I'm
@@ -28,7 +28,8 @@ const HeroSection = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "3xl", display: "inline-block" }}
+              className="text-2xl sm:text-2xl lg:text-3xl"
+              //style={{ fontSize: "1.5 rem", display: "inline-block" }}
               repeat={Infinity}
             />
           </h1>
@@ -64,11 +65,11 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="col-span-5 flex justify-center"
+          className="col-span-5 flex justify-center lg:block hidden"
           style={{ maxHeight: "500px", overflow: "hidden" }}
         >
           <Image
-            src="/images/scubadiver.jpeg"
+            src="/images/me1.png"
             alt="profile pic"
             width={500}
             height={500}
