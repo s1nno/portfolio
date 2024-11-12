@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-
+// test
 const HeroSection = () => {
   return (
     <section className="py-0 pb-10">
