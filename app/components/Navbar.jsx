@@ -14,18 +14,21 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-red-600 to-orange-500 w-full fixed top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex space-x-8 text-white font-bold text-xl uppercase">
-          <Link href="/aboutme" legacyBehavior>
-            <a className="hover:text-gray-300">About</a>
-          </Link>
-          <Link href="/projects" legacyBehavior>
-            <a className="hover:text-gray-300">Projects</a>
-          </Link>
-          <Link href="/contact" legacyBehavior>
-            <a className="hover:text-gray-300">Contact</a>
-          </Link>
+        <div className="text-white font-bold text-xl uppercase">
+          <a href="#hero" className="hover:text-gray-300">
+            Hayden Sandler
+          </a>
         </div>
-        <div className="flex space-x-6 items-center">
+        <div className={`flex space-x-8 items-center ${isOpen ? 'hidden' : 'md:flex'}`}>
+          <a href="#about" className="hover:text-gray-300">
+            About
+          </a>
+          <a href="#projects" className="hover:text-gray-300">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-gray-300">
+            Contact
+          </a>
           <Link
             href="https://www.linkedin.com/in/hayden-sandler-1a98b4235/"
             legacyBehavior
@@ -59,32 +62,26 @@ const Navbar = () => {
               />
             </a>
           </Link>
-          <button
-            onClick={toggleMenu}
-            className="text-white text-2xl md:hidden"
-          >
-            {isOpen ? <FiX /> : <FiMenu />}
-          </button>
         </div>
+        <button
+          onClick={toggleMenu}
+          className="text-white text-2xl md:hidden"
+        >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
       </div>
       {isOpen && (
         <div className="md:hidden bg-gradient-to-r from-red-600 to-orange-500 px-6 py-4">
           <div className="flex flex-col space-y-4 text-white font-bold text-xl uppercase">
-            <Link href="/aboutme" legacyBehavior>
-              <a className="hover:text-gray-300" onClick={toggleMenu}>
-                About
-              </a>
-            </Link>
-            <Link href="/projects" legacyBehavior>
-              <a className="hover:text-gray-300" onClick={toggleMenu}>
-                Projects
-              </a>
-            </Link>
-            <Link href="/contact" legacyBehavior>
-              <a className="hover:text-gray-300" onClick={toggleMenu}>
-                Contact
-              </a>
-            </Link>
+            <a href="#about" className="hover:text-gray-300" onClick={toggleMenu}>
+              About
+            </a>
+            <a href="#projects" className="hover:text-gray-300" onClick={toggleMenu}>
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-gray-300" onClick={toggleMenu}>
+              Contact
+            </a>
             <Link
               href="https://www.linkedin.com/in/hayden-sandler-1a98b4235/"
               legacyBehavior
