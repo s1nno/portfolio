@@ -19,7 +19,7 @@ const Navbar = () => {
             Hayden Sandler
           </a>
         </div>
-        <div className={`flex space-x-8 items-center ${isOpen ? 'hidden' : 'md:flex'}`}>
+        <div className={`space-x-8 items-center hidden md:flex`}>
           <a href="#about" className="hover:text-gray-300">
             About
           </a>

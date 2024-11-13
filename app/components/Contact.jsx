@@ -6,7 +6,7 @@ const EmailButton = () => {
   const body = 'Hello, I have a question about...'; // Default body content
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div id ="contact" style={{ textAlign: 'center', marginTop: '50px' }}>
       {/* "Contact Me" Text with Gradient */}
       <h1
         style={{
