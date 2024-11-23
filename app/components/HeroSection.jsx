@@ -39,10 +39,10 @@ const HeroSection = () => {
             style={{
               paddingTop: "25px",
               paddingBottom: "30px",
+              maxWidth: "600px",
             }}
           >
-            I am a computer science student at the University of Central Florida
-            and this is my portfolio website!
+            Hi, I’m Hayden! I'm currently a Computer Science student at the University of Central Florida. I have a strong passion for coding and enjoy tackling challenging problems through technology. When I’m not coding, I love being active, whether it's hiking, going to, or just exploring nature. I'm also a big sports fan, particularly football and the UFC. In my free time, I enjoy playing video games, watching movies, and listening to music. 
           </p>
 
           <button

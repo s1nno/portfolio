@@ -20,7 +20,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className={`space-x-8 items-center hidden md:flex`}>
-          <a href="#about" className="hover:text-gray-300">
+          {/* <a href="#about" className="hover:text-gray-300">
             About
           </a>
           <a href="#projects" className="hover:text-gray-300">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </a>
           <a href="#contact" className="hover:text-gray-300">
             Contact
-          </a>
+          </a> */}
           <Link
             href="https://www.linkedin.com/in/hayden-sandler-1a98b4235/"
             legacyBehavior
