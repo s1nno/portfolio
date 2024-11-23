@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-red-600 to-orange-500 w-full fixed top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-white font-bold text-xl uppercase">
-          <a href="#hero" className="hover:text-gray-300">
+          <a href="#hero">
             Hayden Sandler
           </a>
         </div>
@@ -33,35 +33,62 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/hayden-sandler-1a98b4235/"
             legacyBehavior
           >
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/icons8-linkedin-30.png"
-                alt="LinkedIn profile"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-          <Link href="https://github.com/s1nno" legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/icons8-github-30.png"
-                alt="GitHub profile"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
-          <Link href="/resume.pdf" legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/icons8-resume-50.png"
-                alt="Resume"
-                width={40}
-                height={40}
-              />
-            </a>
-          </Link>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  transition: 'transform 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              >
+                <Image
+                  src="/images/icons8-linkedin-30.png"
+                  alt="LinkedIn profile"
+                  width={40}
+                  height={40}
+                />
+              </a>
+            </Link>
+            <Link href="https://github.com/s1nno" legacyBehavior>
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: 'inline-block',
+      transition: 'transform 0.3s ease',
+    }}
+    onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+    onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+  >
+    <Image
+      src="/images/icons8-github-30.png"
+      alt="GitHub profile"
+      width={40}
+      height={40}
+    />
+  </a>
+</Link>
+<Link href="/resume.pdf" legacyBehavior>
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: 'inline-block',
+      transition: 'transform 0.3s ease',
+    }}
+    onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
+    onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+  >
+    <Image
+      src="/images/icons8-resume-50.png"
+      alt="Resume"
+      width={40}
+      height={40}
+    />
+  </a>
+</Link>
         </div>
         <button
           onClick={toggleMenu}
